@@ -1,0 +1,20 @@
+{namespace plugin.account}
+
+/**
+* @param user ApplicationUser object which is in the context provided by AccountServlet
+*/
+{template .accountTab}
+<html>
+<head>
+    <meta name="decorator" content="bitbucket.users.account">
+    <meta name="userSlug" content="{$user.slug}">
+    <meta name="activeTab" content="account-plugin-tab">
+    <title>{$user.displayName} / Account Tab</title>
+</head>
+<body>
+<h3>Hello, {$user.displayName}, your id is {$user.id}</h3>
+
+<p>Welcome to my plugin tab in the account page.</p>
+</body>
+</html>
+{/template}
